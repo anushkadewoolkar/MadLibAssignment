@@ -13,12 +13,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public void submit(View v) {
+    public void happy(View v) {
 
         EditText object = (EditText) findViewById(R.id.object);
         EditText food = (EditText) findViewById(R.id.food);
         EditText feeling = (EditText) findViewById(R.id.feeling);
-        EditText noun2 = (EditText) findViewById(R.id.noun2);
+        EditText name2 = (EditText) findViewById(R.id.name2);
         EditText verb2 = (EditText) findViewById(R.id.verb2);
         EditText name = (EditText) findViewById(R.id.name);
         EditText animal = (EditText) findViewById(R.id.animal);
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         String objectStr = object.getText().toString();
         String foodStr = food.getText().toString();
         String feelingStr = feeling.getText().toString();
-        String noun2Str = noun2.getText().toString();
+        String name2Str = name2.getText().toString();
         String verb2Str = verb2.getText().toString();
         String nameStr = name.getText().toString();
         String animalStr = animal.getText().toString();
@@ -43,12 +43,12 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, MadLibInfoActivity.class);
 
-        intent.putExtra(MadLibInfoActivity.OBJECT, animalStr);
-        intent.putExtra(MadLibInfoActivity.FOOD, animalStr);
-        intent.putExtra(MadLibInfoActivity.FEELING, numberStr);
-        intent.putExtra(MadLibInfoActivity.NOUN2, nounStr);
-        intent.putExtra(MadLibInfoActivity.VERB2, verbStr);
-        intent.putExtra(MadLibInfoActivity.NAME, animalStr);
+        intent.putExtra(MadLibInfoActivity.OBJECT, objectStr);
+        intent.putExtra(MadLibInfoActivity.FOOD, foodStr);
+        intent.putExtra(MadLibInfoActivity.FEELING, feelingStr);
+        intent.putExtra(MadLibInfoActivity.NAME2, name2Str);
+        intent.putExtra(MadLibInfoActivity.VERB2, verb2Str);
+        intent.putExtra(MadLibInfoActivity.NAME, nameStr);
         intent.putExtra(MadLibInfoActivity.ANIMAL, animalStr);
         intent.putExtra(MadLibInfoActivity.NUMBER, numberStr);
         intent.putExtra(MadLibInfoActivity.NOUN, nounStr);

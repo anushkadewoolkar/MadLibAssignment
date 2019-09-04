@@ -111,12 +111,11 @@
         app:layout_constraintVertical_bias="0.46" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/funny"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:onClick="submit"
         android:text="Funny"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -127,37 +126,37 @@
 
     <EditText
         android:id="@+id/name"
-        android:layout_width="170dp"
+        android:layout_width="110dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="Someone you know"
+        android:hint="Name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.079" />
+        app:layout_constraintVertical_bias="0.076" />
 
     <EditText
-        android:id="@+id/noun2"
-        android:layout_width="170dp"
+        android:id="@+id/name2"
+        android:layout_width="110dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
-        android:hint="Noun"
+        android:hint="Name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintHorizontal_bias="0.673"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.22" />
+        app:layout_constraintVertical_bias="0.064" />
 
     <EditText
         android:id="@+id/verb2"
@@ -193,7 +192,7 @@
         app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintVertical_bias="0.22" />
 
     <EditText
         android:id="@+id/object"
@@ -232,27 +231,73 @@
         app:layout_constraintVertical_bias="0.46" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/scary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:text="Scary"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="382dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.559" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/sad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sad"
-        tools:layout_editor_absoluteX="200dp"
-        tools:layout_editor_absoluteY="382dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.559" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/happy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Happy"
-        tools:layout_editor_absoluteX="288dp"
-        tools:layout_editor_absoluteY="382dp" />
+        android:onClick="happy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.559" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="girl"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="boy"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="70dp" />
+
+    <Switch
+        android:id="@+id/switch3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="girl"
+        tools:layout_editor_absoluteX="311dp"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <Switch
+        android:id="@+id/switch4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="boy"
+        tools:layout_editor_absoluteX="311dp"
+        tools:layout_editor_absoluteY="70dp" />
 
 </android.support.constraint.ConstraintLayout>
