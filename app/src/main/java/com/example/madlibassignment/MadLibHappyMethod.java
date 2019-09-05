@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class MadLibInfoActivity extends AppCompatActivity {
+public class MadLibHappyMethod extends AppCompatActivity {
     public static final String OBJECT = "object";
     public static final String FOOD = "food";
     public static final String VERB2 = "verb2";
@@ -38,14 +38,16 @@ public class MadLibInfoActivity extends AppCompatActivity {
         String noun = intent.getStringExtra(NOUN);
         String number = intent.getStringExtra(NUMBER);
 
-        String strToDisplay = "There once lived a/an " + animal + " named " + name + ". The " + animal + " was " + adjective2 + " because it wanted " + food
-                + ", As it went to the grocery store, " + name + " saw " + name2 + " and asked why he/she was buying " + food +  ". When " + name + " told "
-                + name2 + " that it was because there was a party at his/her house, " + name2 + " was " + feeling + " because " + name2 + " thought he/she wasn't invited. The party was " + adjective1 +
-                " and " + name + " thought he/she looked " + adjective2 + ". When " + name + " " + verb + "ed downstairs, he/she didn't see " + name2 + ". " + name + " got sad because " + name2 + " was nowhere to be found so "
-                + name + " thought he/she didn't come. After playing with " + object + "s with " + number + " of his/her friends, " + name + " " + verb2 + "ed outside and saw a " + noun + " which inspired the " + animal + " to call "
+        String strToDisplay = "There once lived a " + animal + " named " + name + ". The " + animal + " was " + adjective2 + " because it wanted " + food
+                + ", As it went to the grocery store, " + name + " saw " + name2 + " who asked why she was buying " + food +  ". When " + name + " told "
+                + name2 + " that it was because there was a party at her house, " + name2 + " was " + feeling + " because " + name2 + " thought he wasn't invited. The party was " + adjective1 +
+                " and more than " + number + " people came. " + name + " thought she looked " + adjective2 + ". When " + name + " " + verb + "ed downstairs, she didn't see " + name2 + ". " + name + " got sad because " + name2 + " was nowhere to be found so "
+                + name + " thought he didn't come. After playing with " + object + "s with some of her friends, " + name + " " + verb2 + "ed outside and saw a " + noun + " which inspired the " + animal + " to call "
                 + name2 + ". After talking for a bit, they realized there was a misunderstanding and " + name2 + " just never recieved an invitation because it was delivered to the wrong address. They made up " +
                 "and lived happily ever after.";
         TextView str = (TextView) findViewById(R.id.info);
         str.setText(strToDisplay);
     }
+
+
 }
