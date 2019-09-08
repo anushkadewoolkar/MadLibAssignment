@@ -224,43 +224,42 @@
         android:id="@+id/sad"
         android:layout_width="220dp"
         android:layout_height="50dp"
+        android:layout_marginTop="30dp"
         android:onClick="sad"
         android:padding="@dimen/my_value"
         android:text="Sad"
-        app:layout_constraintBottom_toTopOf="@+id/scary"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/happy" />
+        app:layout_constraintTop_toBottomOf="@+id/scary"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/happy"
         android:layout_width="220dp"
         android:layout_height="50dp"
-        android:layout_marginTop="432dp"
+        android:layout_marginTop="40dp"
         android:onClick="happy"
         android:padding="@dimen/my_value"
         android:text="Happy"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/title"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/food" />
 
     <Button
         android:id="@+id/scary"
         android:layout_width="220dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginTop="24dp"
         android:onClick="scary"
         android:padding="@dimen/my_value"
         android:text="Scary"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.87" />
+        app:layout_constraintTop_toBottomOf="@+id/happy" />
 
     <TextView
         android:id="@+id/title"
