@@ -45,7 +45,7 @@ public class MadLibHappyMethod extends AppCompatActivity {
                 + name + " thought he didn't come. After playing with " + object + "s with some of her friends, " + name + " " + verb2 + "ed outside and saw a " + noun + " which inspired the " + animal + " to call "
                 + name2 + ". After talking for a bit, they realized there was a misunderstanding and " + name2 + " just never recieved an invitation because it was delivered to the wrong address. They made up " +
                 "and lived happily ever after.";
-        TextView str = (TextView) findViewById(R.id.info);
+        TextView str = (TextView) findViewById(R.id.happy);
         str.setText(strToDisplay);
     }
 

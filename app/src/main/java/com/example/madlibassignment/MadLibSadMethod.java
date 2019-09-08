@@ -22,7 +22,7 @@ public class MadLibSadMethod extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mad_lib_info);
+        setContentView(R.layout.activity_mad_lib_sad_method);
 
         Intent intent = getIntent();
         String object = intent.getStringExtra(OBJECT);
@@ -44,7 +44,7 @@ public class MadLibSadMethod extends AppCompatActivity {
                 name + " obviously said yes!!! She thought he was the most " + adjective1 + " and " + adjective2 + " person she’d ever met. She came home and put the " + object + " on her nightstand, deciding it gave her good luck. " +
                 "When she went to sleep, she was quickly awakened by her pet " + animal + " who began licking her face." +
                 " Her mom was yelling at her to go to school and the " + object + " was missing. She sighed, realizing it was just a dream.";
-        TextView str = (TextView) findViewById(R.id.info);
+        TextView str = (TextView) findViewById(R.id.sad);
         str.setText(strToDisplay);
     }
 }

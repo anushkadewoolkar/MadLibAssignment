@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MadLibSadMethod"></activity>
+        <activity android:name=".MadLibScaryMethod" />
         <activity android:name=".MadLibHappyMethod" />
         <activity android:name=".MainActivity">
             <intent-filter>
