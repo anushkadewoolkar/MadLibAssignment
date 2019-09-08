@@ -239,7 +239,7 @@
         android:id="@+id/happy"
         android:layout_width="220dp"
         android:layout_height="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="44dp"
         android:onClick="happy"
         android:padding="@dimen/my_value"
         android:text="Happy"
