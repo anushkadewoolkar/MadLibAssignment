@@ -1,5 +1,6 @@
 package com.example.madlibassignment;
 
+import android.graphics.Typeface;
 import android.graphics.drawable.AnimationDrawable;
 import android.content.Context;
 import android.content.Intent;
@@ -10,12 +11,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-    public class MainActivity extends AppCompatActivity
-    {
+    public class MainActivity extends AppCompatActivity {
 
-    @Override
-        protected void onCreate(Bundle savedInstanceState)
-        {
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
@@ -26,36 +25,31 @@ import android.widget.Toast;
             animationDrawable.start();
         }
 
-        public void happy(View v)
-        {
+        public void happy(View v) {
 
-        EditText object = (EditText) findViewById(R.id.object);
-        EditText food = (EditText) findViewById(R.id.food);
-        EditText feeling = (EditText) findViewById(R.id.feeling);
-        EditText name2 = (EditText) findViewById(R.id.name2);
-        EditText verb2 = (EditText) findViewById(R.id.verb2);
-        EditText name = (EditText) findViewById(R.id.name);
-        EditText animal = (EditText) findViewById(R.id.animal);
-        EditText number = (EditText) findViewById(R.id.number);
-        EditText noun = (EditText) findViewById(R.id.noun);
-        EditText verb = (EditText) findViewById(R.id.verb);
-        EditText adjective1 = (EditText) findViewById(R.id.adjective1);
-        EditText adjective2 = (EditText) findViewById(R.id.adjective2);
+            EditText object = (EditText) findViewById(R.id.object);
+            EditText food = (EditText) findViewById(R.id.food);
+            EditText feeling = (EditText) findViewById(R.id.feeling);
+            EditText name2 = (EditText) findViewById(R.id.name2);
+            EditText verb2 = (EditText) findViewById(R.id.verb2);
+            EditText name = (EditText) findViewById(R.id.name);
+            EditText animal = (EditText) findViewById(R.id.animal);
+            EditText number = (EditText) findViewById(R.id.number);
+            EditText noun = (EditText) findViewById(R.id.noun);
+            EditText verb = (EditText) findViewById(R.id.verb);
+            EditText adjective1 = (EditText) findViewById(R.id.adjective1);
+            EditText adjective2 = (EditText) findViewById(R.id.adjective2);
 
-        if (object.length() == 0 || food.length() == 0 || feeling.length() == 0 || name2.length() == 0 || verb2.length() == 0 ||
-                name.length() == 0 || animal.length() == 0 || number.length() == 0 || noun.length() == 0 || verb.length() == 0 || adjective1.length() == 0
-                || adjective2.length() == 0)
-        {
-            Context context = getApplicationContext();
-            CharSequence text = "Please fill in all inputs";
-            int duration = Toast.LENGTH_SHORT;
+            if (object.length() == 0 || food.length() == 0 || feeling.length() == 0 || name2.length() == 0 || verb2.length() == 0 ||
+                    name.length() == 0 || animal.length() == 0 || number.length() == 0 || noun.length() == 0 || verb.length() == 0 || adjective1.length() == 0
+                    || adjective2.length() == 0) {
+                Context context = getApplicationContext();
+                CharSequence text = "Please fill in all inputs";
+                int duration = Toast.LENGTH_SHORT;
 
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
-        }
-
-                else
-                {
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+            } else {
 
                 String objectStr = object.getText().toString();
                 String foodStr = food.getText().toString();
@@ -89,73 +83,7 @@ import android.widget.Toast;
             }
         }
 
-        public void sad(View v)
-        {
-
-        EditText object = (EditText) findViewById(R.id.object);
-        EditText food = (EditText) findViewById(R.id.food);
-        EditText feeling = (EditText) findViewById(R.id.feeling);
-        EditText name2 = (EditText) findViewById(R.id.name2);
-        EditText verb2 = (EditText) findViewById(R.id.verb2);
-        EditText name = (EditText) findViewById(R.id.name);
-        EditText animal = (EditText) findViewById(R.id.animal);
-        EditText number = (EditText) findViewById(R.id.number);
-        EditText noun = (EditText) findViewById(R.id.noun);
-        EditText verb = (EditText) findViewById(R.id.verb);
-        EditText adjective1 = (EditText) findViewById(R.id.adjective1);
-        EditText adjective2 = (EditText) findViewById(R.id.adjective2);
-
-        if (object.length() == 0 || food.length() == 0 || feeling.length() == 0 || name2.length() == 0 || verb2.length() == 0 ||
-                name.length() == 0 || animal.length() == 0 || number.length() == 0 || noun.length() == 0 || verb.length() == 0 || adjective1.length() == 0
-                || adjective2.length() == 0)
-        {
-            Context context = getApplicationContext();
-            CharSequence text = "Please fill in all inputs";
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
-        }
-
-            else
-            {
-
-
-            String objectStr = object.getText().toString();
-            String foodStr = food.getText().toString();
-            String feelingStr = feeling.getText().toString();
-            String name2Str = name2.getText().toString();
-            String verb2Str = verb2.getText().toString();
-            String nameStr = name.getText().toString();
-            String animalStr = animal.getText().toString();
-            String numberStr = number.getText().toString();
-            String nounStr = noun.getText().toString();
-            String verbStr = verb.getText().toString();
-            String adj1Str = adjective1.getText().toString();
-            String adj2Str = adjective2.getText().toString();
-
-            Intent intent = new Intent(this, MadLibSadMethod.class);
-
-            intent.putExtra(MadLibSadMethod.OBJECT, objectStr);
-            intent.putExtra(MadLibSadMethod.FOOD, foodStr);
-            intent.putExtra(MadLibSadMethod.FEELING, feelingStr);
-            intent.putExtra(MadLibSadMethod.NAME2, name2Str);
-            intent.putExtra(MadLibSadMethod.VERB2, verb2Str);
-            intent.putExtra(MadLibSadMethod.NAME, nameStr);
-            intent.putExtra(MadLibSadMethod.ANIMAL, animalStr);
-            intent.putExtra(MadLibSadMethod.NUMBER, numberStr);
-            intent.putExtra(MadLibSadMethod.NOUN, nounStr);
-            intent.putExtra(MadLibSadMethod.VERB, verbStr);
-            intent.putExtra(MadLibSadMethod.ADJECTIVE1, adj1Str);
-            intent.putExtra(MadLibSadMethod.ADJECTIVE2, adj2Str);
-
-            startActivity(intent);
-            }
-        }
-
-
-        public void scary (View v)
-        {
+        public void sad(View v) {
 
             EditText object = (EditText) findViewById(R.id.object);
             EditText food = (EditText) findViewById(R.id.food);
@@ -172,18 +100,74 @@ import android.widget.Toast;
 
             if (object.length() == 0 || food.length() == 0 || feeling.length() == 0 || name2.length() == 0 || verb2.length() == 0 ||
                     name.length() == 0 || animal.length() == 0 || number.length() == 0 || noun.length() == 0 || verb.length() == 0 || adjective1.length() == 0
-                    || adjective2.length() == 0)
-            {
+                    || adjective2.length() == 0) {
                 Context context = getApplicationContext();
                 CharSequence text = "Please fill in all inputs";
                 int duration = Toast.LENGTH_SHORT;
 
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
-            }
+            } else {
 
-                else
-                {
+
+                String objectStr = object.getText().toString();
+                String foodStr = food.getText().toString();
+                String feelingStr = feeling.getText().toString();
+                String name2Str = name2.getText().toString();
+                String verb2Str = verb2.getText().toString();
+                String nameStr = name.getText().toString();
+                String animalStr = animal.getText().toString();
+                String numberStr = number.getText().toString();
+                String nounStr = noun.getText().toString();
+                String verbStr = verb.getText().toString();
+                String adj1Str = adjective1.getText().toString();
+                String adj2Str = adjective2.getText().toString();
+
+                Intent intent = new Intent(this, MadLibSadMethod.class);
+
+                intent.putExtra(MadLibSadMethod.OBJECT, objectStr);
+                intent.putExtra(MadLibSadMethod.FOOD, foodStr);
+                intent.putExtra(MadLibSadMethod.FEELING, feelingStr);
+                intent.putExtra(MadLibSadMethod.NAME2, name2Str);
+                intent.putExtra(MadLibSadMethod.VERB2, verb2Str);
+                intent.putExtra(MadLibSadMethod.NAME, nameStr);
+                intent.putExtra(MadLibSadMethod.ANIMAL, animalStr);
+                intent.putExtra(MadLibSadMethod.NUMBER, numberStr);
+                intent.putExtra(MadLibSadMethod.NOUN, nounStr);
+                intent.putExtra(MadLibSadMethod.VERB, verbStr);
+                intent.putExtra(MadLibSadMethod.ADJECTIVE1, adj1Str);
+                intent.putExtra(MadLibSadMethod.ADJECTIVE2, adj2Str);
+
+                startActivity(intent);
+            }
+        }
+
+
+        public void scary(View v) {
+
+            EditText object = (EditText) findViewById(R.id.object);
+            EditText food = (EditText) findViewById(R.id.food);
+            EditText feeling = (EditText) findViewById(R.id.feeling);
+            EditText name2 = (EditText) findViewById(R.id.name2);
+            EditText verb2 = (EditText) findViewById(R.id.verb2);
+            EditText name = (EditText) findViewById(R.id.name);
+            EditText animal = (EditText) findViewById(R.id.animal);
+            EditText number = (EditText) findViewById(R.id.number);
+            EditText noun = (EditText) findViewById(R.id.noun);
+            EditText verb = (EditText) findViewById(R.id.verb);
+            EditText adjective1 = (EditText) findViewById(R.id.adjective1);
+            EditText adjective2 = (EditText) findViewById(R.id.adjective2);
+
+            if (object.length() == 0 || food.length() == 0 || feeling.length() == 0 || name2.length() == 0 || verb2.length() == 0 ||
+                    name.length() == 0 || animal.length() == 0 || number.length() == 0 || noun.length() == 0 || verb.length() == 0 || adjective1.length() == 0
+                    || adjective2.length() == 0) {
+                Context context = getApplicationContext();
+                CharSequence text = "Please fill in all inputs";
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+            } else {
 
 
                 String objectStr = object.getText().toString();
