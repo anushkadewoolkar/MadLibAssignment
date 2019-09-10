@@ -1,7 +1,9 @@
 package com.example.madlibassignment;
 
+import android.graphics.drawable.AnimationDrawable;
 import android.content.Context;
 import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +18,12 @@ import android.widget.Toast;
         {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
+
+            ConstraintLayout constraintLayout = findViewById(R.id.layout);
+            AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
+            animationDrawable.setEnterFadeDuration(2000);
+            animationDrawable.setExitFadeDuration(4000);
+            animationDrawable.start();
         }
 
         public void happy(View v)
@@ -39,7 +47,7 @@ import android.widget.Toast;
                 || adjective2.length() == 0)
         {
             Context context = getApplicationContext();
-            CharSequence text = "Please fill in each text space";
+            CharSequence text = "Please fill in all inputs";
             int duration = Toast.LENGTH_SHORT;
 
             Toast toast = Toast.makeText(context, text, duration);
@@ -102,7 +110,7 @@ import android.widget.Toast;
                 || adjective2.length() == 0)
         {
             Context context = getApplicationContext();
-            CharSequence text = "Please fill in each text space";
+            CharSequence text = "Please fill in all inputs";
             int duration = Toast.LENGTH_SHORT;
 
             Toast toast = Toast.makeText(context, text, duration);
@@ -167,7 +175,7 @@ import android.widget.Toast;
                     || adjective2.length() == 0)
             {
                 Context context = getApplicationContext();
-                CharSequence text = "Please fill in each text space";
+                CharSequence text = "Please fill in all inputs";
                 int duration = Toast.LENGTH_SHORT;
 
                 Toast toast = Toast.makeText(context, text, duration);
